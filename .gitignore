@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.tox/
+.nox/
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.mutmut-cache
+.testmondata
+# pymcdc writes <source>.mdc next to the file it analyses. Inert on this family
+# (pymcdc needs >=3.10 and exits 3 before running), kept for uniformity.
+*.mdc
+reports/
+*.log
+.DS_Store
