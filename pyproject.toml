@@ -1,0 +1,16 @@
+# orderlab -- branch PY-007
+# Build backend : setuptools 59.6.0
+# Package manager: conda (solver-resolved)
+# Interpreter    : CPython 3.6.15
+#
+# setuptools 59.6.0 -- last release admitting Python 3.6. Predates setuptools 61, so PEP 621 [project] is unsupported and all metadata lives in setup.cfg.
+# conda can create a python=3.6.15 environment from conda-forge, but conda.anaconda.org and repo.anaconda.com are 403 at this build host's egress proxy, so no solved lock could be produced here. environment.yml is complete and solves on the operator's machine.
+
+[build-system]
+requires = ["setuptools==59.6.0", "wheel==0.37.1"]
+build-backend = "setuptools.build_meta"
+
+# setuptools 59.6.0 predates setuptools 61, so there is deliberately no
+# [project] table here: PEP 621 metadata would be ignored in silence.
+# Everything lives in setup.cfg. That is the authentic shape for a
+# Python 3.6 target and it is what full_check.py asserts.
