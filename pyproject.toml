@@ -1,0 +1,16 @@
+# orderlab -- branch PY-006
+# Build backend : setuptools 59.6.0
+# Package manager: uv 0.12.9
+# Interpreter    : CPython 3.6.15
+#
+# setuptools 59.6.0 -- last release admitting Python 3.6. Predates setuptools 61, so PEP 621 [project] is unsupported and all metadata lives in setup.cfg.
+# uv 0.12.9 REFUSES Python 3.6: "Python 3.6.15 is not supported. Please use Python 3.8 or newer." uv 0.0.5, its first release, already declared >=3.8, and `uv python install 3.6` fails because python-build-standalone's floor is 3.8. There is no version of uv that can drive this branch.
+
+[build-system]
+requires = ["setuptools==59.6.0", "wheel==0.37.1"]
+build-backend = "setuptools.build_meta"
+
+# setuptools 59.6.0 predates setuptools 61, so there is deliberately no
+# [project] table here: PEP 621 metadata would be ignored in silence.
+# Everything lives in setup.cfg. That is the authentic shape for a
+# Python 3.6 target and it is what full_check.py asserts.
