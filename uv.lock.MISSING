@@ -1,0 +1,20 @@
+No uv.lock exists for branch PY-070, and none can -- but NOT for the
+reason the 3.6 and 3.7 families gave.
+
+uv itself works perfectly on Python 3.8.18. poetry-core 1.9.1 works too.
+They cannot work TOGETHER:
+
+    $ uv lock
+    error: No `project` table found in: `pyproject.toml`
+
+    $ uv sync
+    error: No `project` table found in: `pyproject.toml`
+
+uv requires PEP 621. poetry-core 1.9.1 predates poetry-core 2 and
+writes [tool.poetry] instead. Neither half is broken and neither
+is at fault; the metadata shapes are simply incompatible.
+
+This is the only failure of its kind in the corpus, and it is a
+different CLASS from the earlier families' uv failures, which
+were interpreter floors. dataset.json records it as
+nonFunctionalClass: "metadata-shape incompatibility".
