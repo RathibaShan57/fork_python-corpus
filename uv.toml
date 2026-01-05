@@ -1,0 +1,24 @@
+# uv 0.12.9 configuration for branch PY-205.
+#
+# This one WORKS. 3.8 is exactly uv's floor, so after two families
+# in which every uv branch was inert, `uv venv`, `uv pip install`,
+# `uv lock` and `uv sync` all function here -- at uv 0.12.9, the current
+# latest. This is the only package manager in the corpus that is not
+# rolled back on its own family.
+#
+# `uv python install 3.8` also succeeds: python-build-standalone's
+# floor is 3.8 as well, so this is the first version uv can both run
+# on and provide.
+#
+# TOML SCOPING: python-preference and python-downloads are TOP-LEVEL
+# uv settings and must appear BEFORE the [pip] table. Placed after
+# it they parse as pip settings and uv rejects the file outright:
+#   unknown field `python-preference`, expected one of `python`,
+#   `system`, `break-system-packages`, ...
+# The 3.6 and 3.7 families shipped them in the wrong order. Nothing
+# caught it, because uv could not run on either interpreter.
+python-preference = "only-managed"
+python-downloads = "manual"
+
+[pip]
+index-url = "https://pypi.org/simple"
