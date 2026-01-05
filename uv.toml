@@ -1,0 +1,30 @@
+# uv 0.12.9 configuration for branch PY-037.
+#
+# THIS FILE CANNOT BE EXECUTED ON THIS BRANCH.
+#
+#   $ uv venv --python 3.7
+#   error: Can't use Python at `.../python3.7`
+#     Caused by: Python 3.7.17 is not supported. Please use Python 3.8
+#     or newer.
+#
+# uv 0.0.5, its first published release, already declared
+# Requires-Python >=3.8, so there is no earlier uv to fall back to.
+# `uv python install 3.7` also fails: python-build-standalone, the
+# distribution source uv manages interpreters from, has a floor of 3.8.
+#
+# The configuration below is what this branch WOULD use. It is written
+# out in full, and deliberately not substituted with a working manager,
+# because a branch labelled uv that silently ran pip underneath is the
+# exact silent-success failure this corpus exists to catch.
+#
+# TOML SCOPING: python-preference and python-downloads are TOP-LEVEL
+# uv settings and must appear BEFORE the [pip] table. Placed after
+# it they parse as pip settings and uv rejects the file outright
+# with `unknown field `python-preference``. This branch
+# cannot run uv at all, so nothing here would ever have caught it --
+# it was found by building the Python 3.8 family, where uv works.
+python-preference = "only-managed"
+python-downloads = "manual"
+
+[pip]
+index-url = "https://pypi.org/simple"
