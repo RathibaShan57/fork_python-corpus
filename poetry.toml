@@ -1,0 +1,6 @@
+# poetry 1.1.15 -- the last release admitting Python 3.6.
+# in-project virtualenvs keep the resolved environment inspectable
+# by the tool runners without activating anything.
+[virtualenvs]
+in-project = true
+create = true
