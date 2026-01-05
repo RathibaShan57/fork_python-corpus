@@ -1,0 +1,11 @@
+No uv.lock exists for branch PY-013, and none can.
+
+`uv lock` refuses before it reaches resolution:
+
+    error: Failed to inspect Python interpreter from provided path
+      Caused by: Python 3.6.15 is not supported. Please use Python 3.8
+      or newer.
+
+This file is committed in place of the lockfile so that its absence is
+explicit rather than looking like an oversight. dataset.json records
+the same fact machine-readably as branchFunctional: false.
