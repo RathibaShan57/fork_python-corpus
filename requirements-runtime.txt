@@ -1,0 +1,10 @@
+# Runtime pins for branch PY-024. Every one is genuinely imported by
+# packages/domain/src/orderlab/platform/integrations.py -- a planted pin nothing imports
+# produces a manifest-versus-source disagreement that is not a tool
+# defect. Advisory counts confirmed live via the PyPI JSON API on
+# 3 Sep 2026 (api.osv.dev is 403 at the build host).
+requests==2.20.0   # 8 advisories
+Jinja2==2.10   # 12 advisories
+urllib3==1.24.1   # 24 advisories
+cryptography==2.3   # 21 advisories
+paramiko==2.4.1   # 4 advisories
