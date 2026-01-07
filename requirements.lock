@@ -1,0 +1,54 @@
+# Resolved lockfile for branch PY-007.
+#
+# Produced by installing requirements-runtime.txt and
+# requirements-dev.txt into a real CPython 3.6.15 virtualenv with
+# pip 21.3.1 and running `pip freeze`. Every version here is what pip
+# ACTUALLY chose on that interpreter.
+#
+# GitPython==3.1.18 is transitive drift, not a choice: pydriller 2.10
+# declares `gitpython` with no upper bound, so pip resolved backwards
+# to the last release admitting 3.6, silently and with exit 0.
+#
+# lizard and pydriller are both in this file. Both install. Neither
+# imports. A lockfile is not evidence that a tool works.
+GitPython==3.1.18
+Jinja2==2.10
+MarkupSafe==2.0.1
+PyDriller==2.10
+PyNaCl==1.5.0
+Pygments==2.14.0
+asn1crypto==1.5.1
+attrs==22.2.0
+bcrypt==4.0.1
+beniget==0.5.0
+certifi==2025.4.26
+cffi==1.15.1
+chardet==3.0.4
+colorama==0.4.5
+cryptography==2.3
+gast==0.7.0
+gitdb==4.0.9
+idna==2.7
+importlib-metadata==4.8.3
+iniconfig==1.1.1
+lizard==1.24.0
+mando==0.7.1
+packaging==21.3
+paramiko==2.4.1
+pathspec==0.9.0
+pluggy==1.0.0
+py==1.11.0
+pyasn1==0.5.1
+pycparser==2.21
+pyparsing==3.1.4
+pytest==7.0.1
+pytz==2026.3.post1
+radon==6.0.1
+requests==2.20.0
+six==1.17.0
+smmap==5.0.0
+tomli==1.2.3
+types-pytz==2023.3.1.1
+typing_extensions==4.1.1
+urllib3==1.24.1
+zipp==3.6.0
