@@ -1,0 +1,66 @@
+# Tool pins for branch PY-196 -- Python 3.14.
+#
+# EVERY tool is pinned at its current latest release, identically on all
+# 24 branches. Markers decide which of them the interpreter can actually
+# resolve. On Python 3.14 that is 22 of the 22 PyPI tools; the rest are
+# declared and dark, which is the intended measurement, not a defect.
+#
+# Resolved live against PyPI on 3 Sep 2026 and exercised on a real
+# CPython 3.14.0rc2 interpreter. See dataset.json for the answer key.
+
+# -- test runner (INFRASTRUCTURE, not a roster tool: pinned to what runs) --
+pytest==9.1.1
+
+# -- transitive pin held BELOW latest so a roster tool can run ------------
+#
+# pydantic 2.13.5 (the current latest) crashes on this interpreter, and it
+# takes semgrep -- the SAST primary for 7 of the 103 metrics -- down with
+# it. semgrep does not depend on pydantic directly; the chain is
+# semgrep -> mcp -> pydantic-settings -> pydantic, three levels down.
+#
+# The failure is in a PRIVATE CPython API. pydantic calls
+# typing._eval_type(..., prefer_fwd_module=True); 3.14 renamed that
+# keyword to parent_fwdref as part of the PEP 649/749 typing rework, so
+# the call raises TypeError. pydantic swallows it into a fallback whose
+# `assert isinstance(value, ForwardRef)` then fails, because under PEP 649
+# the FORWARDREF format yields a str. `import semgrep` still SUCCEEDS;
+# only invoking it dies.
+#
+# pydantic 2.12.3 is the newest release that works here. This is the
+# 'infrastructure is pinned to what actually runs' half of the policy:
+# pydantic is not a roster tool, and a dark SAST primary would be a far
+# larger distortion than a transitive held one minor release back.
+# Verified: `semgrep --version` and a real `semgrep scan` both succeed,
+# and `pip check` reports no broken requirements.
+pydantic==2.12.3 ; python_version >= '3.14'
+
+# -- roster tools, latest, marker-guarded ---------------------------------
+crosshair-tool==0.0.110 ; python_version >= "3.8"
+coverage==7.16.0 ; python_version >= "3.10"
+pymcdc==0.2.6 ; python_version >= "3.10"
+radon==6.0.1
+lizard==1.24.0
+pytest-testmon==2.2.0 ; python_version >= "3.10"
+# cognitive-ast          not a PyPI distribution -- see tools/cognitive-ast/
+# jscpd                  npm package -- see tools/jscpd/
+pylint==4.0.8 ; python_version >= "3.10"
+semgrep==1.176.0 ; python_version >= "3.10"
+bandit==1.9.4 ; python_version >= "3.10"
+pip-audit==2.10.1 ; python_version >= "3.10"
+cosmic-ray==8.7.0 ; python_version >= "3.9"
+beniget==0.5.0 ; python_version >= "3.6"
+gast==0.7.0 ; python_version >= "3.6"
+pydriller==2.11 ; python_version >= "3.5"
+ruff==0.16.6 ; python_version >= "3.7"
+complexipy==8.0.0 ; python_version >= "3.8"
+# Opengrep               not a PyPI distribution -- see tools/opengrep/
+# Opengrep (taint mode)  not a PyPI distribution -- see tools/opengrep-taint/
+# Trivy                  not a PyPI distribution -- see tools/trivy/
+slipcover==1.1.0 ; python_version >= "3.9"
+mutmut==3.7.0 ; python_version >= "3.10"
+diff-cover==10.5.1 ; python_version >= "3.10"
+astroid==4.0.4 ; python_version >= "3.10"
+pyan3==2.8.1 ; python_version >= "3.10"
+vulture==2.16 ; python_version >= "3.9"
+dulwich==1.2.14 ; python_version >= "3.10"
+# sys.settrace driver (stdlib) not a PyPI distribution -- see tools/settrace/
