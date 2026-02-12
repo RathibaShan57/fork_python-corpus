@@ -14,7 +14,6 @@ require_python_floor "pylint" ">=3.10" "pylint==4.0.8"
 require_import "pylint" "pylint" "pylint==4.0.8"
 
 mkdir -p "$ROOT/reports"
-# standardised runner preamble
 cd "$ROOT"
 
 FINDINGS_EXIT=1   # non-zero from this tool means 'found something', not 'broke'
