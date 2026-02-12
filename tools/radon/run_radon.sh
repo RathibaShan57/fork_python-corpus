@@ -14,7 +14,6 @@ require_python_floor "radon" "" "radon==6.0.1"
 require_import "radon" "radon" "radon==6.0.1"
 
 mkdir -p "$ROOT/reports"
-# standardised runner preamble
 cd "$ROOT"
 
 "$PYBIN" -m radon cc -s -j "$SRC/$PKG" > reports/radon-cc.json && "$PYBIN" -m radon mi -j "$SRC/$PKG" > reports/radon-mi.json && "$PYBIN" -m radon cc -s "$SRC/$PKG/analysis/complexity_sample.py"
