@@ -14,6 +14,7 @@ require_python_floor "ruff" ">=3.7" "ruff==0.16.5"
 require_import "ruff" "ruff" "ruff==0.16.5"
 
 mkdir -p "$ROOT/reports"
+# standardised runner preamble
 cd "$ROOT"
 
 FINDINGS_EXIT=1   # non-zero from this tool means 'found something', not 'broke'
