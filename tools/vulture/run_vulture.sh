@@ -14,7 +14,6 @@ require_python_floor "vulture" ">=3.9" "vulture==2.16"
 require_import "vulture" "vulture" "vulture==2.16"
 
 mkdir -p "$ROOT/reports"
-# standardised runner preamble
 cd "$ROOT"
 
 FINDINGS_EXIT=1   # non-zero from this tool means 'found something', not 'broke'
