@@ -14,7 +14,6 @@ require_python_floor "coverage" ">=3.10" "coverage==7.16.0"
 require_import "coverage" "coverage" "coverage==7.16.0"
 
 mkdir -p "$ROOT/reports"
-# standardised runner preamble
 cd "$ROOT"
 
 "$PYBIN" -m coverage run -m pytest -q && "$PYBIN" -m coverage xml -o reports/coverage.xml && "$PYBIN" -m coverage report
