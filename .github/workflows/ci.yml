@@ -1,0 +1,70 @@
+# CI for PY-026.
+#
+# Python 3.7.17 is long past end of life (June 2023), so
+# actions/setup-python no longer offers it on current runners. The version is
+# pulled from the actions/python-versions manifest instead, which still carries
+# 3.7.17 for ubuntu-20.04 -- and needs Ubuntu 20.04's libssl1.1 and libffi7
+# alongside it, because 22.04+ ships neither and CPython 3.7 links both.
+#
+# A skipped tool exits 3. That is expected here, not a failure: on this
+# interpreter most of the roster cannot install at all, which is the
+# measurement. `make tools` distinguishes an expected skip from a new one.
+name: PY-026
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # PyDriller and dulwich need real history
+
+      - name: Fetch CPython 3.7.17
+        run: |
+          set -euo pipefail
+          URL=$(curl -s https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json \
+            | python3 -c "import json,sys;d=json.load(sys.stdin);print([f['download_url'] for x in d if x['version']=='3.7.17' for f in x['files'] if f.get('platform_version')=='20.04'][0])")
+          curl -sL "$URL" -o /tmp/py.tgz
+          mkdir -p /tmp/py37 && tar xzf /tmp/py.tgz -C /tmp/py37
+          cd /tmp && for u in \
+            http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.24_amd64.deb \
+            http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi7_3.3-4_amd64.deb ; do
+              curl -sLO "$u"; done
+          for d in /tmp/*.deb; do dpkg-deb -x "$d" /tmp/ext; done
+          cp -a /tmp/ext/usr/lib/x86_64-linux-gnu/*.so* /tmp/py37/lib/
+          echo "LD_LIBRARY_PATH=/tmp/py37/lib" >> $GITHUB_ENV
+          echo "/tmp/py37/bin" >> $GITHUB_PATH
+
+      - name: Confirm the interpreter
+        run: |
+          python3.7 -V
+          python3.7 -c "import ssl; print(ssl.OPENSSL_VERSION)"
+
+      - name: Install
+        run: |
+          python3.7 -m venv .venv
+          .venv/bin/python -m pip install --upgrade "pip==24.0"
+          .venv/bin/python -m pip install -r requirements-runtime.txt -r requirements-dev.txt && .venv/bin/python -m pip install -e .
+
+      - name: Test
+        run: .venv/bin/python -m pytest -q
+
+      - name: Cross-file consistency audit
+        run: .venv/bin/python tools/full_check.py
+
+      - name: Verify tool wiring
+        run: .venv/bin/python tools/tool_integration.py --verify
+
+      - name: Run every wired tool
+        run: PYTHON=.venv/bin/python .venv/bin/python tools/tool_integration.py --run
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reports-PY-026
+          path: reports/
