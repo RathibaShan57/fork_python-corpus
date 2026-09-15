@@ -54,7 +54,7 @@ jobs:
       - name: Install opengrep and Trivy
         run: |
           curl -fsSL https://raw.githubusercontent.com/opengrep/opengrep/main/install.sh | bash
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.opengrep/cli/latest" >> "$GITHUB_PATH"
           curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh \
             | sh -s -- -b /usr/local/bin
 
