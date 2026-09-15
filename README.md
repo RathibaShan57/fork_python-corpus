@@ -1,4 +1,4 @@
-# orderlab -- PY-128
+# orderlab -- PY_V311_SETUPTOOLS_CONDA_MICRO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.11 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-128` |
+| Branch | `PY_V311_SETUPTOOLS_CONDA_MICRO` |
 | Python | 3.11.13 |
 | Build backend | setuptools 84.0.0 |
 | Backend metadata | pyproject [project] |
@@ -142,7 +142,7 @@ branch.
 ## Workspace layout
 
 ```
-python-p311-126-130/  (PY-128)
+python-corpus/  (PY_V311_SETUPTOOLS_CONDA_MICRO)
 |-- .github/  (1 files)
 |-- packages/  (23 files)
 |-- services/  (6 files)
