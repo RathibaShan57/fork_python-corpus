@@ -1,4 +1,4 @@
-# orderlab -- PY-146
+# orderlab -- PY_V312_SETUPTOOLS_PIP_MICRO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.12 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-146` |
+| Branch | `PY_V312_SETUPTOOLS_PIP_MICRO` |
 | Python | 3.12.11 |
 | Build backend | setuptools 84.0.0 |
 | Backend metadata | pyproject [project] |
@@ -150,7 +150,7 @@ branch.
 ## Workspace layout
 
 ```
-python-p312-145-149/  (PY-146)
+python-corpus/  (PY_V312_SETUPTOOLS_PIP_MICRO)
 |-- .github/  (1 files)
 |-- language/  (2 files)
 |-- packages/  (23 files)
