@@ -40,7 +40,7 @@ jobs:
 
       - name: Install
         run: |
-          python3.7 -m venv .venv
+          "$(cat /tmp/pybin)" -m venv .venv
           .venv/bin/python -m pip install --upgrade "pip==26.2.1"
           curl -LsSf https://astral.sh/uv/install.sh | sh && $HOME/.local/bin/uv sync --python .venv/bin/python
 
