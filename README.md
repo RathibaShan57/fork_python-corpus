@@ -1,4 +1,4 @@
-# orderlab -- PY-173
+# orderlab -- PY_V313_SETUPTOOLS_UV_MONO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.13 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-173` |
+| Branch | `PY_V313_SETUPTOOLS_UV_MONO` |
 | Python | 3.13.7 |
 | Build backend | setuptools 84.0.0 |
 | Backend metadata | pyproject [project] |
@@ -147,7 +147,7 @@ branch.
 ## Workspace layout
 
 ```
-python-p313-169-173/  (PY-173)
+python-corpus/  (PY_V313_SETUPTOOLS_UV_MONO)
 |-- .github/  (1 files)
 |-- language/  (2 files)
 |-- src/  (20 files)
