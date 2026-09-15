@@ -1,4 +1,4 @@
-# orderlab -- PY-212
+# orderlab -- PY_V314_POETRY_POETRY_MICRO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.14 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-212` |
+| Branch | `PY_V314_POETRY_POETRY_MICRO` |
 | Python | 3.14.0rc2 |
 | Build backend | poetry-core 2.4.1 |
 | Backend metadata | pyproject [project] |
@@ -156,7 +156,7 @@ a branch.
 ## Workspace layout
 
 ```
-python-p314-208-212/  (PY-212)
+python-corpus/  (PY_V314_POETRY_POETRY_MICRO)
 |-- .github/  (1 files)
 |-- language/  (2 files)
 |-- packages/  (23 files)
