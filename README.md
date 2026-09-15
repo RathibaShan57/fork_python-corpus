@@ -1,4 +1,4 @@
-# orderlab -- PY-153
+# orderlab -- PY_V312_UV_PIP_MONO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.12 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-153` |
+| Branch | `PY_V312_UV_PIP_MONO` |
 | Python | 3.12.11 |
 | Build backend | uv_build 0.12.9 |
 | Backend metadata | pyproject [project] |
@@ -144,7 +144,7 @@ branch.
 ## Workspace layout
 
 ```
-python-p312-150-154/  (PY-153)
+python-corpus/  (PY_V312_UV_PIP_MONO)
 |-- .github/  (1 files)
 |-- language/  (2 files)
 |-- src/  (20 files)
