@@ -1,4 +1,4 @@
-# orderlab -- PY-036
+# orderlab -- PY_V37_UV_POETRY_MICRO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.7 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-036` |
+| Branch | `PY_V37_UV_POETRY_MICRO` |
 | Python | 3.7.17 |
 | Build backend | uv_build 0.12.9 |
 | Backend metadata | pyproject [project] |
@@ -131,7 +131,7 @@ latest-only policy: a branch whose tests cannot run is not a branch.
 ## Workspace layout
 
 ```
-python-p37-035-039/  (PY-036)
+python-corpus/  (PY_V37_UV_POETRY_MICRO)
 |-- .github/  (1 files)
 |-- packages/  (23 files)
 |-- services/  (6 files)
