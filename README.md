@@ -1,4 +1,4 @@
-# orderlab -- PY-044
+# orderlab -- PY_V37_POETRY_POETRY_MICRO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.7 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-044` |
+| Branch | `PY_V37_POETRY_POETRY_MICRO` |
 | Python | 3.7.17 |
 | Build backend | poetry-core 1.6.1 |
 | Backend metadata | [tool.poetry] |
