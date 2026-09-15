@@ -1,4 +1,4 @@
-# orderlab -- PY-023
+# orderlab -- PY_V36_POETRY_CONDA_MONO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.6 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-023` |
+| Branch | `PY_V36_POETRY_CONDA_MONO` |
 | Python | 3.6.15 |
 | Build backend | poetry-core 1.0.8 |
 | Backend metadata | [tool.poetry] |
@@ -116,7 +116,7 @@ latest-only policy: a branch whose tests cannot run is not a branch.
 ## Workspace layout
 
 ```
-python-p36-021-024/  (PY-023)
+python-corpus/  (PY_V36_POETRY_CONDA_MONO)
 |-- .github/  (1 files)
 |-- src/  (20 files)
 |-- tests/  (7 files)
