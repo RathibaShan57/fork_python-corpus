@@ -1,4 +1,4 @@
-# orderlab -- PY-045
+# orderlab -- PY_V37_POETRY_UV_MONO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.7 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-045` |
+| Branch | `PY_V37_POETRY_UV_MONO` |
 | Python | 3.7.17 |
 | Build backend | poetry-core 1.6.1 |
 | Backend metadata | [tool.poetry] |
@@ -125,7 +125,7 @@ latest-only policy: a branch whose tests cannot run is not a branch.
 ## Workspace layout
 
 ```
-python-p37-045-048/  (PY-045)
+python-corpus/  (PY_V37_POETRY_UV_MONO)
 |-- .github/  (1 files)
 |-- src/  (20 files)
 |-- tests/  (7 files)
