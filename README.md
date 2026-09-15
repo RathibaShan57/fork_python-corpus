@@ -1,4 +1,4 @@
-# orderlab -- PY-007
+# orderlab -- PY_V36_SETUPTOOLS_CONDA_MONO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.6 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-007` |
+| Branch | `PY_V36_SETUPTOOLS_CONDA_MONO` |
 | Python | 3.6.15 |
 | Build backend | setuptools 59.6.0 |
 | Backend metadata | setup.cfg |
@@ -116,7 +116,7 @@ latest-only policy: a branch whose tests cannot run is not a branch.
 ## Workspace layout
 
 ```
-python-p36-006-010/  (PY-007)
+python-corpus/  (PY_V36_SETUPTOOLS_CONDA_MONO)
 |-- .github/  (1 files)
 |-- src/  (20 files)
 |-- tests/  (7 files)
