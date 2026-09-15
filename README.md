@@ -1,4 +1,4 @@
-# orderlab -- PY-073
+# orderlab -- PY_V39_SETUPTOOLS_PIP_MONO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.9 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-073` |
+| Branch | `PY_V39_SETUPTOOLS_PIP_MONO` |
 | Python | 3.9.23 |
 | Build backend | setuptools 82.0.1 |
 | Backend metadata | pyproject [project] |
@@ -134,7 +134,7 @@ branch.
 ## Workspace layout
 
 ```
-python-p39-073-077/  (PY-073)
+python-corpus/  (PY_V39_SETUPTOOLS_PIP_MONO)
 |-- .github/  (1 files)
 |-- src/  (20 files)
 |-- tests/  (7 files)
