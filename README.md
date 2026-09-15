@@ -1,4 +1,4 @@
-# orderlab -- PY-174
+# orderlab -- PY_V313_SETUPTOOLS_UV_MICRO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.13 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-174` |
+| Branch | `PY_V313_SETUPTOOLS_UV_MICRO` |
 | Python | 3.13.7 |
 | Build backend | setuptools 84.0.0 |
 | Backend metadata | pyproject [project] |
@@ -153,7 +153,7 @@ branch.
 ## Workspace layout
 
 ```
-python-p313-174-178/  (PY-174)
+python-corpus/  (PY_V313_SETUPTOOLS_UV_MICRO)
 |-- .github/  (1 files)
 |-- language/  (2 files)
 |-- packages/  (23 files)
