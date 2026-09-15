@@ -1,4 +1,4 @@
-# orderlab -- PY-109
+# orderlab -- PY_V310_UV_UV_MONO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.10 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-109` |
+| Branch | `PY_V310_UV_UV_MONO` |
 | Python | 3.10.18 |
 | Build backend | uv_build 0.12.9 |
 | Backend metadata | pyproject [project] |
@@ -142,7 +142,7 @@ branch.
 ## Workspace layout
 
 ```
-python-p310-107-111/  (PY-109)
+python-corpus/  (PY_V310_UV_UV_MONO)
 |-- .github/  (1 files)
 |-- src/  (20 files)
 |-- tests/  (7 files)
