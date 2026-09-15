@@ -40,9 +40,9 @@ jobs:
 
       - name: Install
         run: |
-          "$(cat /tmp/pybin)" -m venv .venv
+          uv venv --seed .venv --python "$(cat /tmp/pybin)"
           .venv/bin/python -m pip install --upgrade "pip==26.2.1"
-          curl -LsSf https://astral.sh/uv/install.sh | sh && $HOME/.local/bin/uv sync --python .venv/bin/python
+          curl -LsSf https://astral.sh/uv/install.sh | sh && $HOME/.local/bin/uv sync --all-extras --python .venv/bin/python
 
       - name: Install opengrep and Trivy
         run: |
