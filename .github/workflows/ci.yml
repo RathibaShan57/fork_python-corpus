@@ -40,9 +40,9 @@ jobs:
 
       - name: Install
         run: |
-          "$(cat /tmp/pybin)" -m venv .venv
+          uv venv .venv --python "$(cat /tmp/pybin)"
           .venv/bin/python -m pip install --upgrade "pip==26.2.1"
-          .venv/bin/python -m pip install 'poetry==2.4.2' && .venv/bin/poetry install
+          .venv/bin/python -m pip install 'poetry==2.4.2' && .venv/bin/poetry install --all-extras --no-root && .venv/bin/python -m pip install -e .
 
       - name: Install opengrep and Trivy
         run: |
