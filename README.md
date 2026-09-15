@@ -1,4 +1,4 @@
-# orderlab -- PY-088
+# orderlab -- PY_V39_UV_CONDA_MICRO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.9 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-088` |
+| Branch | `PY_V39_UV_CONDA_MICRO` |
 | Python | 3.9.23 |
 | Build backend | uv_build 0.12.9 |
 | Backend metadata | pyproject [project] |
@@ -140,7 +140,7 @@ branch.
 ## Workspace layout
 
 ```
-python-p39-088-092/  (PY-088)
+python-corpus/  (PY_V39_UV_CONDA_MICRO)
 |-- .github/  (1 files)
 |-- packages/  (23 files)
 |-- services/  (6 files)
