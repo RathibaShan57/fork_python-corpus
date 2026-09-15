@@ -1,4 +1,4 @@
-# orderlab -- PY-030
+# orderlab -- PY_V37_SETUPTOOLS_UV_MICRO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.7 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-030` |
+| Branch | `PY_V37_SETUPTOOLS_UV_MICRO` |
 | Python | 3.7.17 |
 | Build backend | setuptools 68.0.0 |
 | Backend metadata | pyproject [project] |
@@ -131,7 +131,7 @@ latest-only policy: a branch whose tests cannot run is not a branch.
 ## Workspace layout
 
 ```
-python-p37-030-034/  (PY-030)
+python-corpus/  (PY_V37_SETUPTOOLS_UV_MICRO)
 |-- .github/  (1 files)
 |-- packages/  (23 files)
 |-- services/  (6 files)
