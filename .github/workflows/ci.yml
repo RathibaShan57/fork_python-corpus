@@ -51,6 +51,13 @@ jobs:
           .venv/bin/python -m pip install --upgrade "pip==25.0.1"
           echo "uv cannot drive a poetry-core project -- see uv.lock.MISSING" && .venv/bin/python -m pip install -r requirements-runtime.txt -r requirements-dev.txt
 
+      - name: Install opengrep and Trivy
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/opengrep/opengrep/main/install.sh | bash
+          echo "$HOME/.opengrep/cli/latest" >> "$GITHUB_PATH"
+          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh \
+            | sh -s -- -b /usr/local/bin
+
       - name: Test
         run: .venv/bin/python -m pytest -q
 
