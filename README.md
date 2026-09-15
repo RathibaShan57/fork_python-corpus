@@ -1,4 +1,4 @@
-# orderlab -- PY-068
+# orderlab -- PY_V38_POETRY_POETRY_MICRO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.8 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-068` |
+| Branch | `PY_V38_POETRY_POETRY_MICRO` |
 | Python | 3.8.18 |
 | Build backend | poetry-core 1.9.1 |
 | Backend metadata | [tool.poetry] |
@@ -145,7 +145,7 @@ branch.
 ## Workspace layout
 
 ```
-python-p38-064-068/  (PY-068)
+python-corpus/  (PY_V38_POETRY_POETRY_MICRO)
 |-- .github/  (1 files)
 |-- packages/  (23 files)
 |-- services/  (6 files)
