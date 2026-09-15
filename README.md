@@ -1,4 +1,4 @@
-# orderlab -- PY-208
+# orderlab -- PY_V314_UV_CONDA_MICRO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.14 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-208` |
+| Branch | `PY_V314_UV_CONDA_MICRO` |
 | Python | 3.14.0rc2 |
 | Build backend | uv_build 0.12.9 |
 | Backend metadata | pyproject [project] |
@@ -156,7 +156,7 @@ a branch.
 ## Workspace layout
 
 ```
-python-p314-208-212/  (PY-208)
+python-corpus/  (PY_V314_UV_CONDA_MICRO)
 |-- .github/  (1 files)
 |-- language/  (2 files)
 |-- packages/  (23 files)
