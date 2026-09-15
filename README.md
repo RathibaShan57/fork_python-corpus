@@ -1,4 +1,4 @@
-# orderlab -- PY-004
+# orderlab -- PY_V36_SETUPTOOLS_POETRY_MICRO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.6 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-004` |
+| Branch | `PY_V36_SETUPTOOLS_POETRY_MICRO` |
 | Python | 3.6.15 |
 | Build backend | setuptools 59.6.0 |
 | Backend metadata | setup.cfg |
@@ -122,7 +122,7 @@ latest-only policy: a branch whose tests cannot run is not a branch.
 ## Workspace layout
 
 ```
-python-p36-001-005/  (PY-004)
+python-corpus/  (PY_V36_SETUPTOOLS_POETRY_MICRO)
 |-- .github/  (1 files)
 |-- packages/  (23 files)
 |-- services/  (6 files)
