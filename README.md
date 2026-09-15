@@ -1,4 +1,4 @@
-# orderlab -- PY-125
+# orderlab -- PY_V311_SETUPTOOLS_UV_MONO
 
 Order-pricing domain used as a white-box tool-evaluation fixture. One branch of
 the Python 3.11 family: 24 branches across 3 build backends, 4 package managers
@@ -9,7 +9,7 @@ difference in tool output is attributable to the branch variables alone.
 
 | Variable | This branch |
 |---|---|
-| Branch | `PY-125` |
+| Branch | `PY_V311_SETUPTOOLS_UV_MONO` |
 | Python | 3.11.13 |
 | Build backend | setuptools 84.0.0 |
 | Backend metadata | pyproject [project] |
@@ -136,7 +136,7 @@ branch.
 ## Workspace layout
 
 ```
-python-p311-121-125/  (PY-125)
+python-corpus/  (PY_V311_SETUPTOOLS_UV_MONO)
 |-- .github/  (1 files)
 |-- src/  (20 files)
 |-- tests/  (7 files)
