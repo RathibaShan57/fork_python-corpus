@@ -131,7 +131,7 @@ latest-only policy: a branch whose tests cannot run is not a branch.
 ## Workspace layout
 
 ```
-python-p37-040-044/  (PY-044)
+python-corpus/  (PY_V37_POETRY_POETRY_MICRO)
 |-- .github/  (1 files)
 |-- packages/  (23 files)
 |-- services/  (6 files)
