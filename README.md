@@ -125,7 +125,7 @@ latest-only policy: a branch whose tests cannot run is not a branch.
 ## Workspace layout
 
 ```
-python-p37-035-039/  (PY-039)
+python-corpus/  (PY_V37_UV_CONDA_MONO)
 |-- .github/  (1 files)
 |-- src/  (20 files)
 |-- tests/  (7 files)
